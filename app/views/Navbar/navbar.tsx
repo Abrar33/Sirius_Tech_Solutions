@@ -12,7 +12,7 @@ import MobileNavigation from "./mobile-menu";
 import { serviceGroups } from "./nav-items";
 import logoImg from "@/public/assets/3.png"; // Use @ alias for cleaner imports
 
-const navItems = ["Home", "About Us", "Services", "Resources"];
+const navItems = ["Home", "About Us", "Services", "blog"];
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);

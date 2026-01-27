@@ -6,7 +6,7 @@ import { bpoServices } from '@/app/data/bpoData'
 const Services = () => {
   return (
     <>
-    <ServiceHeader title='I'description='iu' image=''/>
+    <ServiceHeader title='Our Services'description='We offer a wide range of services to help your business thrive' image=''/>
     <ServicesSection data={bpoServices}/>
     </>
   )
