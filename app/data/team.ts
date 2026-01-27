@@ -3,6 +3,8 @@ import FaisalImage from '@/public/assets/faisal.jpeg';
 import Abrar from '@/public/assets/Abrar 8.jpeg';
 import mazhar from '@/public/assets/mazhar.jpeg';
 import laiba from '@/public/assets/Laiba.jpeg'
+import noman from '@/public/assets/Noman Yaseen.jpeg';
+import Arshad from '@/public/assets/Arshad Abbasi.jpeg';
 export const teamMembers: TeamMember[] = [
   {
     name: "Faisal Khan",
@@ -11,7 +13,7 @@ export const teamMembers: TeamMember[] = [
   },
   {
     name: "Abrar",
-    role: "Web Developer",
+    role: "Web Developer Manager",
     imageUrl: Abrar,
   },
 
@@ -24,6 +26,16 @@ export const teamMembers: TeamMember[] = [
     name:"Laiba",
 role:"Virtual Assistant Manager",
 imageUrl:laiba
+  },
+    {
+    name:"Arshad Abbasi",
+role:"HR Manager",
+imageUrl:Arshad
+  },
+    {
+    name:"Noman Yaseen",
+role:"Client Success Manager",
+imageUrl:noman
   }
 
 ];
