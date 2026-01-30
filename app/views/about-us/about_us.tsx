@@ -8,22 +8,20 @@ import Team from '../virtualAssitance/Team';
 import MissionVision from './mission_vision';
 import CertificationsSection from './certification_section';
 import { teamMembers } from '@/app/data/team';
+import { serviceHeaders } from '@/app/data/service_header';
 
 const About_us = () => {
   const companyData = [
-  { id: 1, iconName: "Rocket", text: "Founded in 2008" },
-  { id: 2, iconName: "Search", text: "15+ years of proven business transformation experience" },
-  { id: 3, iconName: "Globe", text: "Presence in 7 countries with 14 state of the art facilities" },
-  { id: 4, iconName: "ShieldCheck", text: "Fully compliant with PCI, ISO, SOC2 & GDPR standards" },
-  { id: 5, iconName: "Users", text: "A team of 1900+ skilled professionals delivering measurable impact" },
-  { id: 6, iconName:" Award", text: "Proudly certified as a Great Place to Work, Canada (5 consecutive years)" },
+  { id: 1, iconName: "Rocket", text: "Founded in 2020" },
+  { id: 2, iconName: "Search", text: "5+ years of proven business transformation experience" },
+  { id: 5, iconName: "Users", text: "A team of 100+ skilled professionals delivering measurable impact" },
   { id: 7, iconName: "CheckCircle", text: "Successfully served 580+ clients across 20+ industries and expanding" },
   { id: 8, iconName: "MessageSquare", text: "99.9% on time project completion and 100% client satisfaction" },
 ];
 
   return (
     <>
-    <ServiceHeader title="About Us" description="Learn more about our company, mission, and values." image="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg"/>
+    <ServiceHeader {...serviceHeaders.about_us}/>
     <CompanyHighlights data={companyData} />
     <MissionVision/>
     <CertificationsSection/>

@@ -1,5 +1,7 @@
 import { ServiceHeaderData } from '@/app/types/serviceType';
 import finance from "@/public/assets/finance_header.jpg";
+import ourService from "@/public/assets/our services.jpg";
+import aboutUs from "@/public/assets/aboutus Header.jpg";
 export const serviceHeaders: Record<string, ServiceHeaderData> = {
   bpo:{
     title: "Business Process Outsourcing (BPO)",
@@ -26,4 +28,14 @@ export const serviceHeaders: Record<string, ServiceHeaderData> = {
     description: "Optimize your financial operations with our comprehensive finance and accounting services, designed to enhance accuracy and efficiency.",
     image: finance,
   },
+  ourServices: {
+    title: "Our Services",
+    description: "We offer a wide range of services to help your business thrive",
+    image: ourService,
+  },
+  about_us:{
+    title: "About Us",
+      description:"Learn more about our company, mission, and values.",
+      image:aboutUs
+  }
 };

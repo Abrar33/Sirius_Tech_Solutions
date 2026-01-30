@@ -3,7 +3,8 @@
 import React from 'react';
 import Link from 'next/link';
 import { Mail, Phone, Linkedin, Facebook, Instagram, ArrowUpRight } from 'lucide-react';
-
+import logo from '@/public/assets/3.png';
+import Image from 'next/image';
 // 1. Define TypeScript Interfaces
 interface NavLink {
   name: string;
@@ -73,10 +74,9 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="space-y-6">
             <Link href="/" className="flex items-center gap-2 group">
-              <div className="text-4xl font-bold tracking-tighter">
-                S<span className="text-[#14b8a6]">T</span>
-                <div className="text-[10px] tracking-[0.4em] font-light -mt-1">SOLUTIONS</div>
-              </div>
+              {/* <div className="text-4xl font-bold tracking-tighter"> */}
+                <Image src={logo} alt="Sirius Tech Solutions Logo" className="w-30 h-20 scale-200 hover:scale-x-100 object-contain" />
+              {/* </div> */}
             </Link>
             <p className="text-gray-400 leading-relaxed text-sm max-w-xs">
               &copy; {currentYear} Sirius Solutions<br />
