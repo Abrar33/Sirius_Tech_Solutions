@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUpRight, ArrowRight } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 
 // 1. Define types for the different layout variations
 interface BaseService {
@@ -102,8 +103,11 @@ const servicesData: ServiceItem[] = [
 ];
 
 // Reusable Button Component
-const ActionButton: React.FC<{ text: string }> = ({ text }) => (
-  <button className="flex items-center gap-2 bg-[#14b8a6] hover:bg-[#0d9488] text-white px-6 py-3 rounded-md font-semibold transition-all group mt-6">
+const ActionButton: React.FC<{ text: string; onClick: () => void }> = ({ text, onClick }) => (
+  <button 
+    onClick={onClick}
+    className="flex items-center gap-2 bg-[#14b8a6] hover:bg-[#0d9488] text-white px-6 py-3 rounded-md font-semibold transition-all group mt-6"
+  >
     {text}
     <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
   </button>
@@ -112,7 +116,7 @@ const ActionButton: React.FC<{ text: string }> = ({ text }) => (
 // Reusable List Item Component
 const ListItem: React.FC<{ text: string }> = ({ text }) => (
   <div className="flex items-start gap-4 group py-3 border-b border-gray-800">
-    <div className="mt-1 bg-gray-800 p-1.5 rounded-full flex-shrink-0 group-hover:bg-[#14b8a6] transition-colors">
+    <div className="mt-1 bg-gray-800 p-1.5 rounded-full shrink-0 group-hover:bg-[#14b8a6] transition-colors">
       <ArrowRight className="w-3.5 h-3.5 text-[#14b8a6] group-hover:text-white" />
     </div>
     <p className="text-gray-300 group-hover:text-white transition-colors text-sm md:text-base">
@@ -122,6 +126,12 @@ const ListItem: React.FC<{ text: string }> = ({ text }) => (
 );
 
 const ItServices: React.FC = () => {
+  const router = useRouter();
+
+  const handleNavigation = () => {
+   
+    router.push('/contact#contact');
+  };
   return (
     <div className="bg-black min-h-screen font-sans selection:bg-teal-500/30">
       {servicesData.map((service) => (
@@ -142,7 +152,7 @@ const ItServices: React.FC = () => {
                 {service.description}
               </p>
 
-              <ActionButton text={service.buttonText} />
+              <ActionButton onClick={handleNavigation} text={service.buttonText} />
 
               {/* Grid List Logic */}
               {service.type === "grid" && service.subheading && (

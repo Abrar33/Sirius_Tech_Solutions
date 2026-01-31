@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-
+import contact from '@/public/assets/contact.jpg'
 const Hero: React.FC = () => {
   return (
     /* Added pt-20 (mobile) and pt-24 (desktop) to push content below the navbar */
@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
       {/* Background Image Container */}
       <div className="absolute inset-0 z-0">
         <Image 
-          src="" // Make sure to add your image path here!
+          src={contact} // Make sure to add your image path here!
           alt="Contact Support Background" 
           fill
           priority
@@ -20,7 +20,7 @@ const Hero: React.FC = () => {
           sizes="100vw"
         />
         {/* Gradient Overlay - darkened slightly for better text contrast */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent"></div>
       </div>
 
       {/* Content Container */}

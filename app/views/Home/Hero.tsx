@@ -6,10 +6,11 @@ import React from "react";
 import StatsCard from "./StatCard";
 import { heroSlides } from "@/app/data/hero";
 import { HeroSlide } from "@/app/types/serviceType";
+import { useRouter } from "next/navigation";
 
 export default function Hero(): React.ReactElement {
   const [index, setIndex] = useState<number>(0);
-
+  const router = useRouter();
   // Auto slide logic
   useEffect(() => {
     const interval = setInterval(() => {
@@ -17,17 +18,26 @@ export default function Hero(): React.ReactElement {
     }, 5000);
     return () => clearInterval(interval);
   }, []);
+  const handleConsultationClick = () => {
+    const contactSection = document.getElementById("contact");
 
+    if (contactSection) {
+      // If we are already on the contact page
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    } else {
+      // Navigate to the contact page and jump to the ID
+      router.push("/contact#contact");
+    }
+  };
   // Helper to handle both URL strings and Imported Object sources
   const getImgSrc = (img: any): string => {
-    return typeof img === 'object' ? img.src : img;
+    return typeof img === "object" ? img.src : img;
   };
 
   const currentSlide = heroSlides[index];
 
   return (
     <section className="relative h-[90vh] w-full overflow-hidden">
-      
       {/* Background Image Slider */}
       <AnimatePresence mode="wait">
         <motion.div
@@ -44,7 +54,7 @@ export default function Hero(): React.ReactElement {
             className="h-full w-full object-cover"
           />
           {/* Using standard Tailwind v3 gradient class */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#072220]/80 via-[#072220]/60 to-black/30" />
+          <div className="absolute inset-0 bg-linear-to-r from-[#072220]/80 via-[#072220]/60 to-black/30" />
         </motion.div>
       </AnimatePresence>
 
@@ -76,7 +86,10 @@ export default function Hero(): React.ReactElement {
           transition={{ delay: 0.6 }}
           className="mt-8"
         >
-          <button className="rounded-lg bg-teal-500 px-6 py-3 text-sm font-semibold text-black transition hover:bg-teal-400">
+          <button
+            onClick={handleConsultationClick}
+            className="rounded-lg bg-teal-500 px-6 py-3 text-sm font-semibold text-black transition hover:bg-teal-400"
+          >
             Book a Free Consultation →
           </button>
         </motion.div>
@@ -84,7 +97,6 @@ export default function Hero(): React.ReactElement {
         {/* SINGLE Stats Card (Not Sliding) */}
         <StatsCard />
       </div>
-      
     </section>
   );
 }

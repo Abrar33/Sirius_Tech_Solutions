@@ -1,6 +1,6 @@
-import { StaticImageData } from 'next/image';
+import { StaticImageData } from "next/image";
 // src/types/services.ts
-import { ReactElement } from 'react';
+import { ReactElement } from "react";
 
 export interface Feature {
   icon: ReactElement;
@@ -13,7 +13,7 @@ export interface HRService {
   listTitle: string;
   points: string[];
   buttonText: string;
-  image: string;
+  image: string | StaticImageData;
   reverse?: boolean;
 }
 
@@ -40,7 +40,7 @@ export interface WhoWeAreSection {
   id: number;
   points: string[];
   image: string | any; // Supports both URLs and imported StaticImageData
-  reverse?: boolean;   // Controls text/image order
+  reverse?: boolean; // Controls text/image order
 }
 // src/app/views/Home/Hero.tsx
 export interface HeroSlide {
@@ -95,7 +95,7 @@ export interface ServiceItem {
 
 export interface ServicesSectionProps {
   data: ServiceItem[];
-}// Finance impact.tsx
+} // Finance impact.tsx
 export interface ImpactStat {
   id: number;
   percentage: string;
