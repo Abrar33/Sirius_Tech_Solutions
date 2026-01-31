@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-// 1. Separate Viewport configuration (Required in Next.js 15)
+// 1. Separate Viewport configuration
 export const viewport: Viewport = {
-  themeColor: "#000000", // Change to your brand's primary color
+  themeColor: "#000000",
   width: "device-width",
   initialScale: 1,
 };
@@ -32,6 +32,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://siriustechsolutions.com"),
   alternates: {
     canonical: "/",
+  },
+  // Unified Favicon & Icon logic
+  icons: {
+    icon: "/assets/3.png", // Keep this at the root of /app if possible, or /public
+    apple: "/assets/logo.png", // Using your logo as the apple-touch-icon
   },
   robots: {
     index: true,
@@ -53,7 +58,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.png", // Ensure this exists in your /public folder
+        url: "/assets/3.png", 
         width: 1200,
         height: 630,
         alt: "Sirius Tech Solutions - HR and IT Services",
@@ -64,7 +69,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Sirius Tech Solutions",
     description: "Premium Business & IT Services",
-    images: ["/og-image.png"],
+    images: ["/assets/3.png"],
   },
 };
 
@@ -78,11 +83,11 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "Sirius Tech Solutions",
-    "image": "https://siriustechsolutions.com/logo.png",
+    "image": "https://siriustechsolutions.com/assets/logo.png", // Updated to /assets
     "url": "https://siriustechsolutions.com",
     "address": {
       "@type": "PostalAddress",
-      "addressCountry": "US", // Update to your specific country
+      "addressCountry": "Pakistan",
     },
     "serviceType": [
       "HR Solutions",
@@ -100,9 +105,15 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        {children}
-        <Navbar/>
-        <Footer/>
+        
+        {/* Layout Wrapper */}
+        <div className="flex flex-col min-h-screen">
+          <Navbar />
+          <main className="grow">
+            {children}
+          </main>
+          <Footer />
+        </div>
       </body>
     </html>
   );
