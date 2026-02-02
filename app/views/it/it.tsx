@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import ServiceHeader from '../components/services_header';
 import ItServices from './itServices';
