@@ -3,6 +3,8 @@ import ServiceHeader from '../components/services_header';
 import ItServices from './itServices';
 import SuccessStories from '@/app/views/Home/Stories'
 import DynamicServiceSection from './DynamicService';
+import WhyChooses from '../components/dynamic_choose_us';
+import { ItChooseUs } from '@/app/data/choose_us';
 
 /**
  * SoftwareServices Page Component
@@ -20,7 +22,7 @@ const SoftwareServices: React.FC = () => {
       
       {/* IT Specific Services Grid */}
       <ItServices />
-      
+      <WhyChooses title="Why Choose Our IT Services?" features={ItChooseUs} />
       {/* Customer Success Case Studies */}
       <SuccessStories />
       

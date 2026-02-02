@@ -4,7 +4,7 @@ import hrTwo from "@/public/assets/hr 2.jpg";
 import hrThree from "@/public/assets/hr 3.jpg";
 const hrData: HRService[] = [
   {
-    title: "Payroll Managemenaaaaaat",
+    title: "Payroll Management",
     description:
       "Managing payroll with compliance and accuracy is a challenge most businesses face. NCRI streamlines payroll through robust systems backed by certified experts, handling $500M in wages annually.",
     buttonText: "Simplify Payroll",

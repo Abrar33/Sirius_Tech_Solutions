@@ -21,21 +21,22 @@ export default function Footer() {
 
   const usefulLinks: NavLink[] = [
     { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
+    { name: "About", href: "/about-us" },
     { name: "Blogs", href: "/blog" },
     { name: "Contact", href: "/contact" },
     { name: "Case Studies", href: "/case-studies" },
     { name: "Privacy Policy", href: "/privacy" },
+    { name: "Terms and conditions", href: "/terms" },
   ];
 
-  const services: string[] = [
-    "IT Services",
-    "BPO Services",
-    "Finance and Account Services",
-    "HR Solutions",
-    "Digital Marketing",
-    "Virtual Assistance",
-  ];
+  const services = [
+   { name: "IT Services", slug: "it" },
+  { name: "BPO Services", slug: "bpo" },
+  { name: "Finance & Accounting", slug: "finance" },
+  { name: "HR Solutions", slug: "hr" },
+  { name: "Digital Marketing", slug: "digital-marketing" },
+  { name: "Virtual Assistance", slug: "virtual-assistance" },
+];
 
   return (
     <footer className="relative bg-[#020a0a] text-white pt-24 overflow-hidden font-sans">
@@ -118,19 +119,23 @@ export default function Footer() {
           </div>
 
           {/* Services Column */}
-          <div>
-            <h3 className="text-xl font-bold mb-8 text-[#14b8a6]">Services</h3>
-            <ul className="space-y-4">
-              {services.map((service) => (
-                <li key={service}>
-                  <Link href={`/services/${service.toLowerCase().replace(/ /g, '-')}`} className="text-gray-300 hover:text-[#14b8a6] transition-colors flex items-center gap-2 group text-sm">
-                    <ArrowUpRight className="w-4 h-4 text-[#14b8a6] opacity-0 group-hover:opacity-100 transition-opacity" />
-                    {service}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+         {/* Services Column */}
+<div>
+  <h3 className="text-xl font-bold mb-8 text-[#14b8a6]">Services</h3>
+  <ul className="space-y-4">
+    {services.map((service) => (
+      <li key={service.slug}>
+        <Link 
+          href={`/services/${service.slug}`} 
+          className="text-gray-300 hover:text-[#14b8a6] transition-colors flex items-center gap-2 group text-sm"
+        >
+          <ArrowUpRight className="w-4 h-4 text-[#14b8a6] opacity-0 group-hover:opacity-100 transition-opacity" />
+          {service.name}
+        </Link>
+      </li>
+    ))}
+  </ul>
+</div>
         </div>
       </div>
 

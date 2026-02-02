@@ -6,6 +6,7 @@ import WhyChooses from '../components/dynamic_choose_us';
 import { Globe, Languages } from 'lucide-react';
 import SuccessStories from '../Home/Stories';
 import ServicesSection from '../components/service_section';
+import { MarketingChooseUs } from '@/app/data/choose_us';
 
 // 1. Define the Feature interface (Matches your dynamic_choose_us component)
 interface MarketingFeature {
@@ -23,24 +24,7 @@ interface MarketingService {
   reverse: boolean;
 }
 
-const callCenterFeatures: MarketingFeature[] = [
-  {
-    icon: <Globe size={24} />,
-    text: "High-volume efficiency with 24/7 global support"
-  },
-  {
-    icon: <Languages size={24} />,
-    text: "Multilingual agents serving worldwide audiences (20+ languages and dialects)"
-  },
-  {
-    icon: <Globe size={24} />,
-    text: "Proven performance metrics and real-time reporting"
-  },
-  {
-    icon: <Languages size={24} />,
-    text: "Strategic brand alignment across all digital platforms"
-  },
-];
+
 
 const services: MarketingService[] = [
   {
@@ -112,7 +96,7 @@ const DigitalMarketing: React.FC = () => {
       {/* WhyChooses expects features: Feature[] */}
       <WhyChooses 
         title='Why Choose Our Digital Marketing Services' 
-        features={callCenterFeatures} 
+        features={MarketingChooseUs} 
       />
       
       <SuccessStories />

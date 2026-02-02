@@ -6,17 +6,38 @@ import ServicesSection from "../components/service_section";
 import WhyChooses from "../components/dynamic_choose_us";
 import SuccessStories from "../Home/Stories";
 import DynamicServiceSection from "../components/dynamic_service";
-import { Globe, Languages } from "lucide-react";
+import { Award, Clock, Globe, Languages, MessageSquare, ShieldCheck, TrendingDown } from "lucide-react";
 
 // DATA IMPORTS
 import { bpoServices } from "@/app/data/bpoData";
 import { serviceHeaders } from "@/app/data/service_header";
-
-const Features = [
-  { icon: <Globe size={24} />, text: "Elite Global Talent..." },
-  { icon: <Languages size={24} />, text: "Ironclad Security..." },
-  // ... rest of features
-];
+import { BpoChooseUs } from "@/app/data/choose_us";
+// const Features = [
+//   { 
+//     icon: <Globe size={24} className="text-emerald-400" />, 
+//     text: "Elite Global Talent – Skilled professionals delivering world-class service." 
+//   },
+//   { 
+//     icon: <Clock size={24} className="text-emerald-400" />, 
+//     text: "24/7 Customer Support – Round-the-clock availability for maximum satisfaction." 
+//   },
+//   { 
+//     icon: <ShieldCheck size={24} className="text-emerald-400" />, 
+//     text: "Ironclad Security – Top-tier data protection for sensitive business information." 
+//   },
+//   { 
+//     icon: <TrendingDown size={24} className="text-emerald-400" />, 
+//     text: "Cost-Effective Solutions – Reduce operational costs without compromising quality." 
+//   },
+//   { 
+//     icon: <MessageSquare size={24} className="text-emerald-400" />, 
+//     text: "Multi-Channel Expertise – Engage customers via Phone, Email, Chat & Social Media seamlessly." 
+//   },
+//   { 
+//     icon: <Award size={24} className="text-emerald-400" />, 
+//     text: "Proven Track Record – Hundreds of satisfied clients across multiple industries." 
+//   },
+// ];
 
 const Bpo: React.FC = () => {
   return (
@@ -26,7 +47,7 @@ const Bpo: React.FC = () => {
       {/* Passing the data from the external file */}
       <ServicesSection data={bpoServices} />
 
-      <WhyChooses title="Why Choose Us" features={Features} />
+      <WhyChooses title="Why Choose Us" features={BpoChooseUs} />
       <SuccessStories />
 
       <DynamicServiceSection

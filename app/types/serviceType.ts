@@ -32,7 +32,7 @@ export interface FeatureHighlightProps {
   title: string;
   subtitle?: string;
   reasons: HighlightReason[];
-  image: string;
+  image: string | StaticImageData;
   buttonText: string;
 }
 // src/app/views/Home/WhoWeAre.tsx

@@ -5,6 +5,7 @@ import GlobalReach from './GlobeReach'
 import VirtualServices from './ServicesWeOffer'
 import TrustSection from './Trust'
 import SuccessStories from './Stories'
+import PresidentsMessage from './PresidentMessage'
 
 const Home = () => {
   return (
@@ -13,8 +14,10 @@ const Home = () => {
     <WhoWeAre/>
     <GlobalReach/>
     <VirtualServices/>
+
     <TrustSection/>
     <SuccessStories/>
+    <PresidentsMessage/>
     </>
   )
 }

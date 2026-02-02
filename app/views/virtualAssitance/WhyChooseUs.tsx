@@ -7,6 +7,7 @@ import {
   HighlightReason,
 } from "@/app/types/serviceType";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 const FeatureHighlight: React.FC<FeatureHighlightProps> = ({
   title,
@@ -74,7 +75,7 @@ const FeatureHighlight: React.FC<FeatureHighlightProps> = ({
         {/* RIGHT IMAGE */}
         <div className="relative">
           <div className="overflow-hidden rounded-3xl border border-white/10">
-            <img
+            <Image
               src={image}
               alt={title}
               className="h-full w-full object-cover"

@@ -12,14 +12,11 @@ import WhyChooses from "../components/dynamic_choose_us";
 import { Globe, Languages } from "lucide-react";
 import SuccessStories from "../Home/Stories";
 import DynamicServiceSection from "../components/dynamic_service";
+import { FinanceChooseUs } from "@/app/data/choose_us";
 
 const Finance = () => {
   const financeHeader = serviceHeaders?.financeAccounting;
-const Features = [
-  { icon: <Globe size={24} />, text: "Elite Global Talent..." },
-  { icon: <Languages size={24} />, text: "Ironclad Security..." },
-  // ... rest of features
-];
+
   if (!financeHeader) return null;
 
   return (
@@ -64,7 +61,7 @@ const Features = [
           <ServicesSection data={FinancialServices} />
         </div>
       </section>
-      <WhyChooses title="Why Choose Us" features={Features} />
+      <WhyChooses title="Why Choose Sirius Tech Finance & Accounting?" features={FinanceChooseUs} />
       <SuccessStories/>
        <DynamicServiceSection
         layout="banner"
