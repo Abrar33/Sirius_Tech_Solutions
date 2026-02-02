@@ -124,7 +124,7 @@ const ContactSection: React.FC = () => {
                 onChange={(e) =>
                   setFormData({ ...formData, fullName: e.target.value })
                 }
-                placeholder="Abrar"
+                placeholder="John Doe"
                 className="w-full bg-zinc-900/50 border border-zinc-800 p-4 rounded-xl text-white focus:border-teal-500 outline-none transition-all"
               />
             </div>
@@ -141,28 +141,47 @@ const ContactSection: React.FC = () => {
                 onChange={(e) =>
                   setFormData({ ...formData, email: e.target.value })
                 }
-                placeholder="abrar@example.com"
+                placeholder="john@example.com"
                 className="w-full bg-zinc-900/50 border border-zinc-800 p-4 rounded-xl text-white focus:border-teal-500 outline-none transition-all"
               />
             </div>
+<div className="group relative space-y-2">
+  <label
+    htmlFor="service"
+    className="block text-[10px] font-black uppercase tracking-[0.15em] text-zinc-500 transition-colors group-focus-within:text-teal-500"
+  >
+    Service Interest
+  </label>
+  
+  <div className="relative">
+    <select
+      id="service"
+      name="service"
+      value={formData.service}
+      onChange={handleChange}
+      className="w-full appearance-none rounded-xl border border-zinc-800 bg-zinc-900/50 p-4 text-sm text-zinc-100 
+                 ring-offset-zinc-950 transition-all duration-200 
+                 focus:border-teal-500/50 focus:bg-zinc-900 focus:ring-2 focus:ring-teal-500/20 outline-none
+                 cursor-pointer hover:border-zinc-600"
+    >
+      <option value="" disabled className="bg-zinc-900">Choose a service...</option>
+      <option value="BPO Solutions" className="bg-zinc-900">BPO Solutions</option>
+      <option value="Software Development" className="bg-zinc-900">Software Development</option>
+      <option value="HR Services" className="bg-zinc-900">HR Services</option>
+      <option value="Digital Marketing" className="bg-zinc-900">Digital Marketing</option>
+      <option value="Finance & Accounting" className="bg-zinc-900">Finance & Accounting</option>
+      <option value="Virtual Assistant" className="bg-zinc-900">Virtual Assistant</option>
+      <option value="Other" className="bg-zinc-900">Other</option>
+    </select>
 
-            <div className="space-y-2">
-              <label className="text-xs font-bold uppercase tracking-wider text-zinc-500">
-                Service Interest
-              </label>
-              <select
-                name="service"
-                value={formData.service}
-                onChange={handleChange}
-                className="w-full bg-zinc-900/50 border border-zinc-800 p-4 rounded-xl text-zinc-400 focus:border-teal-500 outline-none"
-              >
-                <option value="BPO Solutions">BPO Solutions</option>
-                <option value="IT Infrastructure">IT Infrastructure</option>
-                <option value="Software Development">
-                  Software Development
-                </option>
-              </select>
-            </div>
+    {/* Custom Chevron Arrow */}
+    <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-zinc-500">
+      <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+      </svg>
+    </div>
+  </div>
+</div>
 
             <div className="space-y-2">
               <label className="text-xs font-bold uppercase tracking-wider text-zinc-500">

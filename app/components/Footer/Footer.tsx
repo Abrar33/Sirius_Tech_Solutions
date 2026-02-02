@@ -24,7 +24,7 @@ export default function Footer() {
     { name: "About", href: "/about-us" },
     { name: "Blogs", href: "/blog" },
     { name: "Contact", href: "/contact" },
-    { name: "Case Studies", href: "/case-studies" },
+    { name: "Case Studies", href: "/" },
     { name: "Privacy Policy", href: "/privacy" },
     { name: "Terms and conditions", href: "/terms" },
   ];
