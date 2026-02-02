@@ -3,13 +3,12 @@
 import React from "react";
 import Image from "next/image";
 import greatPlaceT from "@/public/assets/GREAT-PLACE-TO-WORK.webp";
-import d from "@/public/assets/CAMSE.webp";
 import oesm from "@/public/assets/OECM-GOLD.webp";
 
 const CertificationsSection = () => {
   const certifications = [
     { id: 1, src: greatPlaceT, alt: "Great Place to Work" },
-    { id: 2, src: d, alt: "ISO Certified" },
+    
     { id: 3, src: oesm, alt: "OECM Gold Partner" },
   ];
 
