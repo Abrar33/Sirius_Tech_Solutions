@@ -99,26 +99,6 @@ const ContactSection: React.FC = () => {
               </p>
             </div>
           </div>
-
-          <div className="bg-zinc-900/30 p-8 rounded-3xl border border-zinc-800">
-            <h3 className="text-xl font-bold mb-6 flex items-center gap-3">
-              <MapPin className="text-teal-500" /> Global Presence
-            </h3>
-            <div className="grid gap-3 text-zinc-400 text-sm">
-              <p>
-                <strong className="text-white">Pakistan:</strong> Plot 266-B,
-                I-9/3, Islamabad
-              </p>
-              <p>
-                <strong className="text-white">UAE:</strong> Al Baker Tower #5,
-                Sharjah
-              </p>
-              <p>
-                <strong className="text-white">Canada:</strong> Suite #300, 5060
-                Spectrum Way, Mississauga
-              </p>
-            </div>
-          </div>
         </div>
 
         {/* Right Side: Contact Form */}
@@ -132,7 +112,6 @@ const ContactSection: React.FC = () => {
               name="time"
               value={new Date().toLocaleString()}
             />
-
             <div className="space-y-2">
               <label className="text-xs font-bold uppercase tracking-wider text-zinc-500">
                 Full Name
