@@ -22,7 +22,7 @@ export default async function BlogPostPage({ params }: Props) {
   const currentUrl = `https://yourdomain.com/blog/${slug}`;
 
   return (
-    <main className="bg-black min-h-screen pt-32 pb-20 px-6">
+    <main className="bg-black text-white min-h-screen pt-32 pb-20 px-6">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12">
         
         {/* Main Content (Left) */}

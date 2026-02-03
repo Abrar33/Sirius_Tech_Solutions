@@ -8,6 +8,8 @@ import SuccessStories from "../Home/Stories";
 import WhyChooseUs from "../virtualAssitance/WhyChooseUs";
 import FeatureHighlight from "../virtualAssitance/WhyChooseUs";
 import { hrHighlight } from "@/app/data/choose_us";
+import DynamicServiceSection from "../components/dynamic_service";
+import { serviceHeaders } from "@/app/data/service_header";
 /**
  * HrServices Page Component
  * Handles the layout for Recruitment, Onboarding, and HR Management sections.
@@ -20,9 +22,7 @@ const HrServices: React.FC = () => {
   return (
     <>
       <ServiceHeader
-        title="HR Services"
-        description="Our HR services are designed to streamline your human resources operations, enhance employee engagement, and ensure compliance with labor laws. From recruitment and onboarding to payroll management and performance evaluation, we provide comprehensive solutions tailored to your business needs."
-        image={headerImage}
+      {...serviceHeaders.hr}
       />
 
       {/* Section focusing on finding the right talent */}
@@ -35,6 +35,13 @@ const HrServices: React.FC = () => {
       ))}
       <FeatureHighlight {...hrHighlight} />
       <SuccessStories />
+          <DynamicServiceSection
+        layout="banner"
+        image="https://images.pexels.com/photos/4974922/pexels-photo-4974922.jpeg"
+        title="Looking to scale your HR team or build a future-ready workforce?"
+        description="Partner with ST Solutions for talent, technology, and transformation."
+        buttonText="Get Started Today"
+      />
     </>
   );
 };

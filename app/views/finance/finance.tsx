@@ -66,8 +66,8 @@ const Finance = () => {
        <DynamicServiceSection
         layout="banner"
         image="https://images.pexels.com/photos/4974922/pexels-photo-4974922.jpeg"
-        title="At Sirius Tech Solutions, we don’t just answer calls"
-        description="We build Customer Loyalty, Accelerate Sales, and Optimize Performance."
+        title="at Sirius Tech Solutions, Finance is more than numbers"
+        description="We deliver clarity, compliance, and strategic insights to drive your business forward."
         buttonText="Grow With STS"
       />
     </main>

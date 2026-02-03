@@ -6,6 +6,7 @@ import SuccessStories from '@/app/views/Home/Stories'
 import DynamicServiceSection from './DynamicService';
 import WhyChooses from '../components/dynamic_choose_us';
 import { ItChooseUs } from '@/app/data/choose_us';
+import { serviceHeaders } from '@/app/data/service_header';
 
 /**
  * SoftwareServices Page Component
@@ -16,9 +17,7 @@ const SoftwareServices: React.FC = () => {
     <>
       {/* Hero / Header Section */}
       <ServiceHeader 
-        title="Software Services" 
-        description="Our software services encompass a wide range of solutions designed to meet your business needs, from custom software development to system integration and maintenance."
-        image="https://ncrisolutions.com/wp-content/uploads/2025/08/IT-Services-Banner-2048x569.webp"  
+     {...serviceHeaders.it}
       />      
       
       {/* IT Specific Services Grid */}

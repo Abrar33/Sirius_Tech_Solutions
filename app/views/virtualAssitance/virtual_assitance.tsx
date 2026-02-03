@@ -11,6 +11,8 @@ import FeatureHighlight from "./WhyChooseUs";
 import { vaHighlight } from "@/app/data/choose_us";
 import { TeamMember } from "@/app/types/serviceType";
 import { teamMembers } from "@/app/data/team";
+import DynamicServiceSection from "../components/dynamic_service";
+import { serviceHeaders } from "@/app/data/service_header";
 // 1. Define an interface for the Feature items
 interface CallCenterFeature {
   icon: React.ReactNode;
@@ -44,9 +46,7 @@ const VirtualAssistance: React.FC = () => {
   return (
     <div>
       <ServiceHeader
-        title="Virtual Assistance"
-        description="Our virtual assistance services provide comprehensive support to streamline your operations and enhance productivity."
-        image="https://images.pexels.com/photos/7709258/pexels-photo-7709258.jpeg?_gl=1*2uaq45*_ga*MTM5MzE2Njk1MC4xNzY3NTk4MDcy*_ga_8JE65Q40S6*czE3Njc3NjMxMzIkbzckZzEkdDE3Njc3NjQxODckajU5JGwwJGgw"
+      {...serviceHeaders.virtualAssistant}
       />
 
       <FeatureHighlight {...vaHighlight} />
@@ -65,6 +65,13 @@ const VirtualAssistance: React.FC = () => {
 
       {/* Case Studies / Success Stories */}
       <SuccessStories />
+          <DynamicServiceSection
+        layout="banner"
+        image="https://images.pexels.com/photos/4974922/pexels-photo-4974922.jpeg"
+        title="Looking to scale your Virtual Assistance team?"
+        description="Partner with ST Solutions for talent, technology, and transformation."
+        buttonText="Get Started Today"
+      />
     </div>
   );
 };

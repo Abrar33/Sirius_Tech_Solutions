@@ -7,6 +7,8 @@ import { Globe, Languages } from 'lucide-react';
 import SuccessStories from '../Home/Stories';
 import ServicesSection from '../components/service_section';
 import { MarketingChooseUs } from '@/app/data/choose_us';
+import DynamicServiceSection from '../components/dynamic_service';
+import { serviceHeaders } from '@/app/data/service_header';
 
 // 1. Define the Feature interface (Matches your dynamic_choose_us component)
 interface MarketingFeature {
@@ -85,9 +87,7 @@ const DigitalMarketing: React.FC = () => {
   return (
     <>
       <ServiceHeader
-        title="Digital Marketing"
-        description="Comprehensive digital marketing services to boost your online presence and drive growth."
-        image="https://ncrisolutions.com/wp-content/uploads/2025/08/Digital-Marketing-Service-Banner-2048x506.webp"
+      {...serviceHeaders.digitalMarketing}
       />
       
       {/* ServicesSection expects data: ServiceItem[] */}
@@ -100,6 +100,13 @@ const DigitalMarketing: React.FC = () => {
       />
       
       <SuccessStories />
+          <DynamicServiceSection
+        layout="banner"
+        image="https://images.pexels.com/photos/4974922/pexels-photo-4974922.jpeg"
+        title="Looking to scale your Digital Marketing team?"
+        description="Partner with ST Solutions for talent, technology, and transformation."
+        buttonText="Get Started Today"
+      />
     </>
   );
 }
