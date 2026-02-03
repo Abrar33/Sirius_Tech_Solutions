@@ -69,7 +69,7 @@ const VirtualAssistance: React.FC = () => {
         layout="banner"
         image="https://images.pexels.com/photos/4974922/pexels-photo-4974922.jpeg"
         title="Looking to scale your Virtual Assistance team?"
-        description="Partner with ST Solutions for talent, technology, and transformation."
+        description="Partner with Sirius Tech Solutions for talent, technology, and transformation."
         buttonText="Get Started Today"
       />
     </div>
