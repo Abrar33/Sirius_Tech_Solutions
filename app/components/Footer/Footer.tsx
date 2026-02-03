@@ -153,13 +153,14 @@ export default function Footer() {
 // 2. Typed SocialIcon Component
 function SocialIcon({ icon, href }: SocialIconProps) {
   return (
-    <a 
-      href={href} 
-      target="_blank" 
+    <Link
+    href='/'
+    
+      // target="_blank" 
       rel="noopener noreferrer" 
       className="p-2.5 bg-white text-black rounded-md hover:bg-[#14b8a6] hover:text-white transition-all shadow-sm"
     >
       {icon}
-    </a>
+    </Link>
   );
 }
