@@ -34,10 +34,13 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   // Unified Favicon & Icon logic
-  icons: {
-    icon: "/assets/3.png", // Keep this at the root of /app if possible, or /public
-    apple: "/assets/logo.png", // Using your logo as the apple-touch-icon
-  },
+icons: {
+  icon: [
+    { url: "/assets/3.png" }, // Standard favicon
+    { url: "/assets/3.png", sizes: "192x192", type: "image/png" }, // Specific size for Google
+  ],
+  apple: "/assets/logo.png", 
+},
   robots: {
     index: true,
     follow: true,
