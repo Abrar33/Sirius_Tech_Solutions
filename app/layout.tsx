@@ -27,17 +27,21 @@ export const metadata: Metadata = {
     template: "%s | Sirius Tech Solutions",
     default: "Sirius Tech Solutions | Premium Business & IT Services",
   },
+  verification: {
+    google: "1Ys-TqWNXtX65CaPm8VcDw58sTPfTIdDdvVtFiGIpC4",
+  },
   description: "Empowering businesses with HR solutions, Digital Marketing, Virtual Assistants, and cutting-edge IT services.",
   keywords: ["HR Solutions", "Digital Marketing", "Virtual Assistant", "IT Services", "Business Outsourcing", "Sirius Tech"],
   metadataBase: new URL("https://siriustechsolutions.com"),
   alternates: {
     canonical: "/",
   },
-
+  // Unified Favicon & Icon logic
+// layout.tsx
 icons: {
   icon: [
     { url: "/favicon.ico", sizes: "any" }, // Direct link for the root file
-    { url: "/assets/favicon.ico", sizes: "32x32", type: "image/x-icon" },
+   { url: "/assets/favicon.ico?v=2", sizes: "32x32", type: "image/x-icon" },
     { url: "/assets/favicon.ico", sizes: "48x48", type: "image/x-icon" }, // Standard search size
     { url: "/assets/favicon.ico", sizes: "192x192", type: "image/x-icon" }, // Best for high-res
   ],
