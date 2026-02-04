@@ -41,7 +41,7 @@ export const metadata: Metadata = {
 icons: {
   icon: [
     { url: "/favicon.ico", sizes: "any" }, // Direct link for the root file
-   { url: "/assets/favicon.ico?v=2", sizes: "32x32", type: "image/x-icon" },
+   { url: "/assets/favicon.ico?v=3", sizes: "32x32", type: "image/x-icon" },
     { url: "/assets/favicon.ico", sizes: "48x48", type: "image/x-icon" }, // Standard search size
     { url: "/assets/favicon.ico", sizes: "192x192", type: "image/x-icon" }, // Best for high-res
   ],
