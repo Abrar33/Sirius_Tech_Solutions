@@ -35,14 +35,14 @@ export const metadata: Metadata = {
   },
   // Unified Favicon & Icon logic
 icons: {
-  icon: [
-    { url: "/favicon.ico" }, // Traditional fallback
-    { url: "/assets/favicon.ico", sizes: "32x32", type: "image/png" },
-    { url: "/assets/favicon.icon", sizes: "192x192", type: "image/png" }, // Best for Google
+ icon: [
+    { url: "/assets/favicon.ico", sizes: "32x32", type: "image/x-icon" },
+    { url: "/assets/favicon.ico", sizes: "192x192", type: "image/x-icon" }, 
   ],
   apple: [
-    { url: "/assets/3.png", sizes: "180x180", type: "image/png" }, // High-res Apple icon
+    { url: "/assets/favicon.ico", sizes: "180x180", type: "image/x-icon" }, 
   ],
+ 
 },
   robots: {
     index: true,
