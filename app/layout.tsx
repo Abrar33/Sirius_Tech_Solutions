@@ -38,16 +38,20 @@ export const metadata: Metadata = {
   },
   // Unified Favicon & Icon logic
 // layout.tsx
+// Inside your metadata object in layout.tsx
 icons: {
   icon: [
-    { url: "/assets/favicon.ico", sizes: "any" }, // Direct link for the root file
-   { url: "/assets/favicon.ico?v=3", sizes: "32x32", type: "image/x-icon" },
-    { url: "/assets/favicon.ico", sizes: "48x48", type: "image/x-icon" }, // Standard search size
-    { url: "/assets/favicon.ico", sizes: "192x192", type: "image/x-icon" }, // Best for high-res
+    { 
+      url: "/assets/favicon.ico?v=4", 
+      sizes: "any" 
+    },
+    { 
+      url: "/assets/favicon.ico?v=4", 
+      sizes: "48x48", 
+      type: "image/x-icon" 
+    },
   ],
-  apple: [
-    { url: "/assets/favicon.ico", sizes: "180x180", type: "image/x-icon" }, 
-  ],
+  apple: "/assets/favicon.ico?v=4",
 },
   robots: {
     index: true,
