@@ -36,10 +36,13 @@ export const metadata: Metadata = {
   // Unified Favicon & Icon logic
 icons: {
   icon: [
-    { url: "/assets/3.png" }, // Standard favicon
-    { url: "/assets/3.png", sizes: "192x192", type: "image/png" }, // Specific size for Google
+    { url: "/favicon.ico" }, // Traditional fallback
+    { url: "/assets/3.png", sizes: "32x32", type: "image/png" },
+    { url: "/assets/3.png", sizes: "192x192", type: "image/png" }, // Best for Google
   ],
-  apple: "/assets/logo.png", 
+  apple: [
+    { url: "/assets/3.png", sizes: "180x180", type: "image/png" }, // High-res Apple icon
+  ],
 },
   robots: {
     index: true,
