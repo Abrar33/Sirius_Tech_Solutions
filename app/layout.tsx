@@ -42,12 +42,12 @@ export const metadata: Metadata = {
 icons: {
   icon: [
     { 
-      url: "/assets/favicon.ico?v=5", 
-      sizes: "92x92", 
-      type: "image/x-icon" 
+      url: "/assets/favicon.png?v=6", 
+      
+      type: "image/png" 
     },
   ],
-  apple: "/assets/favicon.ico?v=5",
+  apple: "/assets/favicon.png?v=6",
 },
   robots: {
     index: true,
