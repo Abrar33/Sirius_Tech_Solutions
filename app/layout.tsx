@@ -42,16 +42,12 @@ export const metadata: Metadata = {
 icons: {
   icon: [
     { 
-      url: "/assets/favicon.ico?v=4", 
-      sizes: "any" 
-    },
-    { 
-      url: "/assets/favicon.ico?v=4", 
-      sizes: "48x48", 
+      url: "/assets/favicon.ico?v=5", 
+      sizes: "92x92", 
       type: "image/x-icon" 
     },
   ],
-  apple: "/assets/favicon.ico?v=4",
+  apple: "/assets/favicon.ico?v=5",
 },
   robots: {
     index: true,
